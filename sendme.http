@@ -1,0 +1,6 @@
+@sendme_HostAddress = http://localhost:5137
+
+GET {{sendme_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

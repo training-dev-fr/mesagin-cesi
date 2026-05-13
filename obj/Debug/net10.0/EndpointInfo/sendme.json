@@ -1,0 +1,46 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "sendme | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost:7015"
+    },
+    {
+      "url": "http://localhost:5137"
+    }
+  ],
+  "paths": {
+    "/User/register": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/User/login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "User"
+    }
+  ]
+}
