@@ -7,23 +7,36 @@ namespace sendme.Controllers
     [Route("[controller]")]
     public class UserController : Controller
     {
-        private List<UserModel> listUser = new List<UserModel>();
+        private static List<UserModel> listUser = new List<UserModel>();
 
         [HttpPost]
         [Route("register")]
         public ActionResult Register(UserModel user)
         {
-            Console.WriteLine("Register");
-            Console.WriteLine(user.ToString());
-            return Ok();
+            UserModel? userFound = listUser.FirstOrDefault(u => u.Email == user.Email);
+            if(userFound != null)
+            {
+                return Conflict("User already exists");
+            }
+            listUser.Add(user);
+            return Created("",user);
         }
 
         [HttpPost]
         [Route("login")]
-        public ActionResult Login()
+        public ActionResult Login(UserModel user)
         {
-            Console.WriteLine("Login");
-            return Ok();
+            UserModel? userFound = listUser.FirstOrDefault(u => u.Email == user.Email);
+            if(userFound == null)
+            {
+                return Unauthorized();
+            }
+            if(userFound.Password != user.Password)
+            {
+                return Unauthorized();
+            }
+            return Ok("connected");
+
         }
     }
 }
