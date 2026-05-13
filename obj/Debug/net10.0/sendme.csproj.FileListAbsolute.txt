@@ -32,3 +32,4 @@ C:\Users\Aurélien\Documents\project\sendme\obj\Debug\net10.0\refint\sendme.dll
 C:\Users\Aurélien\Documents\project\sendme\obj\Debug\net10.0\sendme.pdb
 C:\Users\Aurélien\Documents\project\sendme\obj\Debug\net10.0\sendme.genruntimeconfig.cache
 C:\Users\Aurélien\Documents\project\sendme\obj\Debug\net10.0\ref\sendme.dll
+C:\Users\Aurélien\Documents\project\sendme\obj\Debug\net10.0\sendme.sourcelink.json

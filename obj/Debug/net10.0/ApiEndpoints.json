@@ -16,7 +16,13 @@
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "sendme.Models.UserModel",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

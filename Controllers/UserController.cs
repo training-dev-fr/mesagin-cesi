@@ -11,9 +11,10 @@ namespace sendme.Controllers
 
         [HttpPost]
         [Route("register")]
-        public ActionResult Register()
+        public ActionResult Register(UserModel user)
         {
             Console.WriteLine("Register");
+            Console.WriteLine(user.ToString());
             return Ok();
         }
 

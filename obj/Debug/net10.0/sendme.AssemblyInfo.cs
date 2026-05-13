@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("sendme")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa3324cf82c62629bd3fb28ed3161e39febe1e11")]
 [assembly: System.Reflection.AssemblyProductAttribute("sendme")]
 [assembly: System.Reflection.AssemblyTitleAttribute("sendme")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

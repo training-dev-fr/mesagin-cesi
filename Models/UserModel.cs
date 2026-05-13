@@ -12,5 +12,10 @@
             Email = email;
             Password = password;
         }
+
+        public override string ToString()
+        {
+            return $"L'utilisateur {Name} a pour adresse email {Email} et mot de passe {Password}";
+        }
     }
 }
