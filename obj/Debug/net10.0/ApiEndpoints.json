@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "sendme.Controllers.MessageController",
+    "Method": "Create",
+    "RelativePath": "Message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "sendme.Models.MessageModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "sendme.Controllers.MessageController",
+    "Method": "GetAll",
+    "RelativePath": "Message",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "sendme.Controllers.UserController",
     "Method": "Login",
     "RelativePath": "User/login",

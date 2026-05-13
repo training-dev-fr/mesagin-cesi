@@ -13,6 +13,38 @@
     }
   ],
   "paths": {
+    "/Message": {
+      "post": {
+        "tags": [
+          "Message"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageModel"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/User/register": {
       "post": {
         "tags": [
@@ -80,6 +112,38 @@
   },
   "components": {
     "schemas": {
+      "MessageModel": {
+        "required": [
+          "content",
+          "userId",
+          "createdAt"
+        ],
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "userId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "createdAt": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time"
+          }
+        }
+      },
       "UserModel": {
         "required": [
           "name",
@@ -120,6 +184,9 @@
     }
   },
   "tags": [
+    {
+      "name": "Message"
+    },
     {
       "name": "User"
     }
