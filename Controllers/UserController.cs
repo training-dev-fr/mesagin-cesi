@@ -18,6 +18,8 @@ namespace sendme.Controllers
             {
                 return Conflict("User already exists");
             }
+            int? maxIdUser = listUser.Max(u => u.Id);
+            user.Id = maxIdUser+1 ?? 1;
             listUser.Add(user);
             return Created("",user);
         }
@@ -35,7 +37,7 @@ namespace sendme.Controllers
             {
                 return Unauthorized();
             }
-            return Ok("connected");
+            return Ok(userFound.Id);
 
         }
     }
